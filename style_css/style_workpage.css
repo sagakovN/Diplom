@@ -1,0 +1,788 @@
+/* Общие стили */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+
+h1,h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Отключаем перенос строк */
+    height: 100vh;
+}
+
+#tabsList {
+    padding: 1rem 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: calc(100vh - 150px); /* Высота списка вкладок */
+    overflow-y: auto; /* Добавляет вертикальную прокрутку */
+}
+
+.table_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px; /* Максимальная ширина вкладки */
+    margin: 5px;
+    word-break: break-word; /* Перенос длинного текста на новую строку */
+    white-space: normal; /* Позволяет тексту переноситься на новые строки */
+    box-sizing: border-box;
+}
+
+.table_list span {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.button_edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    min-width: 35px;
+    min-height: 35px;
+    max-width: 55px;
+    max-height: 55px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.button_edit i {
+    font-size: 20px;
+}
+
+.button_edit:hover {
+    background-color: rgb(206, 206, 206);
+    
+}
+
+.button_delete {
+    margin-left: 5px;
+    padding: 2px 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0; /* Не позволяет кнопке удаления сжиматься */
+}
+
+.table_list:hover {
+    cursor: pointer;
+    background-color: rgb(17, 96, 98);
+    border-radius: 7px;
+    color: rgb(186, 186, 186);
+}
+
+.table_list:active {
+    background-color: rgb(12, 74, 75);
+    color: rgb(207, 207, 207);
+}
+
+header {
+    background-color: rgb(17, 96, 98);
+    min-height: 55px;
+    max-height: 55px;
+    min-width: 100%;
+    position: fixed;
+}
+
+.button_header {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.button_header a {
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+.button_header a:hover {
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+.right_header {
+    margin: 0;
+    margin-right: 40px;
+}
+
+#name_user {
+    padding-right: 15px;
+    background-color: rgb(17, 96, 98);
+    color: rgb(255, 255, 255);
+}
+#name_user:hover {
+    color: rgb(199, 199, 199);
+}
+#name_user:active {
+    color: rgb(147, 147, 147);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    min-width: 94%;
+    min-height: 94vh;
+    margin-top: 55px;
+    margin-left: 70px;
+    transition: margin-left 0.25s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+
+.wrapp-1, .wrapp-3, .wrapp-4 {
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 3px 3px 8px rgba(0, 0, 0, 0.2), -2px 2px 5px rgba(0, 0, 0, 0.3), -3px 3px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+}
+
+.wrapp-1 {
+    flex: 1;
+    max-width: 280px; /* Максимальная ширина для фиксированного размера */
+    min-width: 280px; /* Минимальная ширина для фиксированного размера */
+}
+
+.wrapp-3 {
+    flex: 3; /* Самый большой блок, занимает больше пространства */
+    padding: 20px;
+    overflow-y: auto; /* Добавляет вертикальную прокрутку */
+}
+
+.wrapp-3 p{
+    width: 25%;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid;
+    border-color: rgb(190, 190, 190);
+}
+
+.wrapp-4 {
+    flex: 1;
+    max-width: 300px; /* Максимальная ширина для фиксированного размера */
+    min-width: 250px; /* Минимальная ширина для фиксированного размера */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Начинаем выравнивание с верхней части */
+    position: relative; /* Для правильного позиционирования внутри блока */
+    overflow: hidden;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Отступ снизу для разделения с содержимым */
+}
+
+.title-container h3 {
+    margin: 0;
+}
+
+.description-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет перенос блоков на следующую строку при необходимости */
+    gap: 10px; /* Расстояние между блоками */
+}
+
+.description-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 200px; /* Минимальная ширина блока */
+    max-width: 530px;
+    flex-grow: 1; /* Блоки будут расширяться, чтобы занимать доступное пространство */
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative; /* Для позиционирования кнопки редактирования */
+    box-sizing: border-box; /* Учитывает padding и border в размерах блока */
+}
+
+.description-item p {
+    border: none;
+    flex-grow: 1;
+    margin: 0;
+    word-wrap: break-word; /* Перенос длинных слов */
+}
+
+.description-item .edit_button {
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: rgb(17, 96, 98);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.description-item .edit_button:hover {
+    background-color: rgb(12, 74, 75);
+}
+
+.button_delete {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(185, 59, 32);
+    border: none;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    flex-shrink: 0; /* Не позволяет кнопке удаления сжиматься */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button_delete:hover {
+    background-color: rgb(150, 48, 26);
+}
+
+.button_delete:active {
+    background-color: rgb(100, 32, 17);
+}
+
+.button_delete i {
+    font-size: 16px; /* Размер иконки */
+    color: white; /* Цвет иконки */
+}
+
+.add_description_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(17, 96, 98);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add_description_button:hover {
+    background-color: rgb(12, 74, 75);
+}
+
+.add_description_button i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.delete_button {
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 40px; /* Отступ, чтобы кнопка удаления не перекрывала кнопку редактирования */
+    background-color: rgb(185, 59, 32);
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.delete_button i {
+    font-size: 20px;
+    color: rgb(185, 59, 32);
+}
+
+.delete_button:hover i {
+    color: rgb(150, 48, 26);
+}
+
+#createTasksButton {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(185, 59, 32);
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+#createTasksButton:hover {
+    background-color: rgb(144, 46, 25);
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+#createTasksButton:active {
+    background-color: rgb(119, 39, 21);
+    color: rgb(183, 183, 183);
+}
+
+.tasks {
+    width: 100%;
+    height: 100%;
+}
+
+.tasks h3{
+    padding: 10px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tasks p{
+    padding: 10px;
+    background-color: #f9f9f9; /* Цвет фона формы */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#createTabButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    transition: .2s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: sticky; /* Фиксируем кнопку */
+    bottom: 0; /* Располагаем кнопку внизу */
+    background-color: white; /* Цвет фона кнопки */
+}
+
+#createTabButton:hover {
+    background-color: rgb(17, 96, 98);
+    color: white;
+    cursor: pointer;
+}
+
+#createTabButton:active {
+    background-color: rgb(12, 74, 75);
+    color: rgb(207, 207, 207);
+}
+
+.assignment {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: auto;
+    margin: 20px;
+    margin-right: 0;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 3px 3px 8px rgba(0, 0, 0, 0.2), -2px 2px 5px rgba(0, 0, 0, 0.3), -3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для списка вкладок */
+#tabsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: calc(100vh - 150px); /* Высота списка вкладок */
+    overflow-y: auto; /* Добавляет вертикальную прокрутку */
+}
+
+#tabsList li {
+    display: flex;
+    align-items: center;
+    max-width: 100%; /* Максимальная ширина вкладки */
+    padding: 5px;
+    margin: 5px;
+    word-break: break-word; /* Перенос длинного текста на новую строку */
+    white-space: normal; /* Позволяет тексту переноситься на новые строки */
+    box-sizing: border-box;
+}
+
+.edit_button {
+    padding: 5px 10px;
+    background-color: rgb(17, 96, 98);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit_button:hover {
+    background-color: rgb(12, 74, 75);
+}
+
+.group_button{
+    padding: 5px 10px;
+    background-color: rgb(17, 96, 98);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.group_button:hover{
+    background-color: rgb(12, 74, 75);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input[type="text"]::placeholder,
+form textarea::placeholder {
+    color: #999;
+}
+
+form textarea {
+    resize: vertical; /* Позволяет вертикально изменять размер текстовой области */
+    overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+    word-break: break-word; /* Перенос длинных слов */
+    white-space: pre-wrap; /* Сохраняет пробелы и переносы строк, позволяет перенос текста */
+    height: 200px; /* Фиксированная высота текстовой области */
+}
+
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: rgb(17, 96, 98);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: rgb(12, 74, 75);
+}
+
+.button_group {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.button_group:hover {
+    background-color: #0056b3;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.comments-section {
+    flex-grow: 1;
+    overflow-y: auto;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px; /* Отступ для формы комментариев */
+}
+
+.comment {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment p {
+    margin: 0;
+    word-wrap: break-word; /* Перенос длинных слов */
+}
+
+.comment strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.comment em {
+    font-style: normal;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.comments-section h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#commentsContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+#commentForm {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 10px;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    position: absolute;
+    bottom: 0;
+    width: 89%;
+    box-sizing: border-box;
+}
+
+#commentForm textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    height: 50px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+#commentForm button {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#commentForm button:hover {
+    background-color: #0056b3;
+}
+
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.comment-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.comment-actions .like-count,
+.comment-actions .dislike-count {
+    margin-left: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.reactions {
+    margin-top: 5px;
+}
+
+.reactions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.reactions button:hover {
+    color: #007bff;
+}
+
+.reactions .like-button {
+    color: #28a745;
+}
+
+.reactions .dislike-button {
+    color: #dc3545;
+}
+
+.assign_group_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(17, 96, 98);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.attach_file_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(17, 96, 98);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.attach_file_button {
+    display: inline-block; /* Убедитесь, что кнопка отображается */
+    /* Другие стили кнопки */
+}
+
+.student-only {
+    display: none; /* Это не должно быть активным для кнопок, видимых студентам */
+}
+
+.files-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.files-table th, .files-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.files-table th {
+    background-color: #f2f2f2;
+}
+
+.files-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.files-container {
+    margin-bottom: 20px;
+}
+
+.edit-assignment-form input{
+    margin-top: 10px;
+}
+
+.edit-assignment-form button{
+    margin-top: 10px;
+}
+
+#editDescriptionForm textarea{
+    margin-top: 10px;
+}
+
+#editDescriptionForm button{
+    margin-top: 10px;
+}
+
+.file-item{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin-top: 10px;
+
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#uploadFileForm input{
+    margin-top: 10px;
+}
+
+#uploadFileForm button{
+    margin-top: 10px;
+    width: 10%;
+}
+
+.teacher-header {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(185, 59, 32);
+    border: 1px solid rgb(185, 59, 32);
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,190 @@
+body{
+    margin: 0;
+    background-color: rgb(210, 210, 210);
+}
+
+ul{
+    list-style-type: none;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.table_list{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    color: black;
+    background-color: rgb(219, 219, 219);
+    transition: 0.5;
+}
+
+.table_list:hover{
+    cursor: pointer;
+    background-color: rgb(17, 96, 98);
+    color: rgb(186, 186, 186);
+}
+
+.table_list:active{
+    background-color: rgb(12, 74, 75);
+    color: rgb(207, 207, 207);
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    min-height: 55px;
+    background-color: rgb(17, 96, 98);
+}
+
+.header_action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    min-height: 55px;
+}
+
+.user_account{
+    padding-right: 15px;
+    background-color: rgb(17, 96, 98);
+    color: rgb(255 255 255);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.user_account:hover{
+    color: rgb(199, 199, 199);
+}
+
+.user_account:active{
+    color: rgb(147, 147, 147);
+}
+
+.exit{
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border-radius: 16px;
+    background-color: rgb(185, 59, 32);
+    border: none;
+    color: rgb(255, 255, 255);
+}
+
+.exit:hover{
+    background-color: rgb(148, 49, 27);
+    color: rgb(209, 209, 209);
+}
+
+.exit:active{
+    background-color: rgb(123, 41, 22);
+    color: rgb(167, 167, 167);
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 100%;
+    min-height: 628px;
+}
+
+.sidebar{
+    flex: 1;
+    width: 90%;
+    background-color: rgb(237, 237, 237);
+    margin-right: 10px;
+    border-radius: 0 20px 20px 0;
+}
+
+.button_delete{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(185, 59, 32);
+    margin-left: 20px;
+}
+
+.container_tasks{
+    flex: 6;
+    display: flex;
+    align-items: center;
+}
+
+#createTasksButton{
+    width: 4%;
+    height: 9%;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: absolute;
+    border: none;
+    background-color: rgb(185, 59, 32);
+    color: rgb(255 255 255);
+    font-size: 30px;
+}
+
+#createTasksButton:hover{
+    background-color: rgb(144, 46, 25);
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+#createTasksButton:active{
+    background-color: rgb(119, 39, 21);
+    color: rgb(183, 183, 183);
+}
+
+.main_container{
+    width: 100%;
+    height: 100%;
+    flex: 16;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px 0 0 20px;
+}
+
+#createTabButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    background-color: rgb(219, 219, 219);
+    transition: 0.5;
+}
+
+#createTabButton:hover{
+    background-color: rgb(17, 96, 98);
+    color: white;
+    cursor: pointer;
+}
+
+#createTabButton:active{
+    background-color: rgb(12, 74, 75);
+    color: rgb(207, 207, 207);
+}
+
+.assignment{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    width: 250px;
+    height: 560px;
+    margin: 20px;
+    margin-right: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(183, 183, 183);
+}

@@ -1,0 +1,115 @@
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    position: fixed; /* Закрепляем на месте */
+    top: 0; /* Позиционируем сверху */
+    left: 0; /* Позиционируем слева */
+    height: 100vh; /* Занимаем всю высоту экрана */
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: rgb(17, 96, 98);
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+#sidebar.expand ~ .main-container {
+    margin-left: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo {
+    margin: auto 0;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#sidebar:not(.expand) a.sidebar-link span,
+#sidebar.expand a.sidebar-link span {
+    text-decoration: none; /* Убираем подчёркивание */
+}
+  
+#sidebar.expand a.sidebar-link span {
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+    transition-delay: .1s;
+}
+  
+#sidebar.expand a.sidebar-link span.visible {
+    visibility: visible;
+}
+
+.sidebar-nav {
+    padding: 1rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #3b7ddd;
+}
+
+a.sidebar-link:active {
+    color: rgb(205, 205, 205);
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .5s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}

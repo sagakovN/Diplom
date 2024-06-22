@@ -1,0 +1,179 @@
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+
+/* КОНТЕЙНЕР HEADER*/
+
+header{
+    background-color: rgb(255, 255, 255);
+    padding-right: 100px;
+    min-width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-height: 55px;
+
+    margin: 0 300px 0 300px;
+}
+
+.logo img{
+    width: 80px;
+}
+
+.ul_list{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.ul_list a{
+    padding-right: 40px;
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+    
+}
+
+.ul_list a:hover{
+    color: black;
+}
+
+.button a{
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border-radius: 16px;
+    background-color: rgb(185, 59, 32);
+    color: rgb(255, 255, 255);
+}
+
+.button a:hover{
+    background-color: rgb(148, 49, 27);
+    color: rgb(209, 209, 209);
+}
+
+.button a:active{
+    background-color: rgb(123, 41, 22);
+    color: rgb(167, 167, 167);
+}
+
+/* КОНТЕЙНЕР WELCOME */
+
+.welcome{
+    display: flex;
+    justify-content: center;
+
+    max-width: 100%;
+    background-color: rgb(17, 96, 98);
+}
+
+.welcome img{
+    width: 30%;
+    height: 30%;
+}
+
+/* КОНТЕЙНЕР SELECTION_INFO */
+
+.selection_info{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 500px 0 500px;
+    text-decoration: none;
+
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+
+
+}
+
+.info_button{
+    padding: 20px 60px 20px 60px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.info_button:hover{
+    background-color: rgb(17, 96, 98);
+    cursor: pointer;
+    color: white;
+}
+
+.info_button:active{
+    background-color: rgb(14, 78, 79);
+    color: rgb(172, 172, 172);
+}
+
+.tab-content{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+#Tab1{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 400px 0 400px;
+}
+
+#Tab1 img{
+    width: 50%;
+}
+
+#Tab2{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 400px 0 400px;
+}
+
+#Tab2 img{
+    width: 50%;
+}
+#Tab3{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 400px 0 400px;
+}
+
+#Tab3 img{
+    width: 50%;
+}
+
+#Tab4{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 400px 0 400px;
+}
+
+#Tab4 img{
+    width: 50%;
+}
+
+
+footer{
+    height: 150px;
+    background-color: rgb(17, 96, 98);
+
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

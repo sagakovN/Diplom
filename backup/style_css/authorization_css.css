@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(17, 96, 98);
+    padding: 40px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Адаптируйте под свои нужды */
+}
+
+input, h1 {
+    text-align: center;
+    margin: 12px 0; /* Устанавливаете интервал между элементами */
+}
+
+input {
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+    width: 100%; /* Адаптируйте под свои нужды */
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+}
+
+#button{
+    border: 1px solid rgb(185, 59, 32);
+    background-color: rgb(185, 59, 32);
+    color: white;
+}
+
+#button:hover{
+    border: 1px solid rgb(148, 49, 27);
+    background-color: rgb(148, 49, 27);
+    color: rgb(209, 209, 209);
+}
+
+#button:active{
+    border: 1px solid rgb(123, 41, 22);
+    background-color: rgb(123, 41, 22);
+    color: rgb(167, 167, 167);
+}

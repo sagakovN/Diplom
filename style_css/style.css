@@ -1,0 +1,132 @@
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+}
+/* КОНТЕЙНЕР HEADER*/
+
+header{
+    background-color: rgb(255, 255, 255);
+    padding-right: 100px;
+    min-width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-height: 55px;
+}
+
+.logo_ul_list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.logo img{
+    width: 80px;
+}
+.ul_list{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.ul_list a{
+    padding-right: 40px;
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+    
+}
+.ul_list a:hover{
+    color: black;
+}
+
+.button{
+    margin-right: 40px;
+}
+
+.button a{
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border-radius: 16px;
+    background-color: rgb(185, 59, 32);
+    color: rgb(255, 255, 255);
+}
+.button a:hover{
+    background-color: rgb(148, 49, 27);
+    color: rgb(209, 209, 209);
+}
+.button a:active{
+    background-color: rgb(123, 41, 22);
+    color: rgb(167, 167, 167);
+}
+
+/* КОНТЕЙНЕР WELCOME */
+.welcome{
+    display: flex;
+    justify-content: center;
+
+    max-width: 100%;
+    background-color: rgb(17, 96, 98);
+}
+.welcome img{
+    width: 30%;
+    height: 30%;
+}
+/* КОНТЕЙНЕР SELECTION_INFO */
+.selection_info{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.info_button{
+    padding: 20px 60px 20px 60px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    transition: 0.18s;
+}
+
+.info_button:hover{
+    background-color: rgb(17, 96, 98);
+    cursor: pointer;
+    color: white;
+}
+
+.info_button:active{
+    background-color: rgb(14, 78, 79);
+    color: rgb(172, 172, 172);
+}
+
+.tab-content{
+    margin: 0 200px 0 200px;
+    font-size: 20px;
+}
+
+.tab-content p{
+    width: 80%;
+}
+
+.tab-content img {
+    width: 33%; /* Задаем ширину изображения равной одной трети контейнера */
+}
+
+.p_info_tab_content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

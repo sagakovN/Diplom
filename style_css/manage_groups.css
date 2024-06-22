@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 10px; /* Добавление отступа */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.233); /* Добавление тени */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+header{
+    background-color: rgb(17, 96, 98);
+    min-height: 55px;
+    max-height: 55px;
+    min-width: 100%;
+    position: fixed;
+}
+
+.button_header{
+    margin-right: 20px;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.button_header a{
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+.button_header a:hover{
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+#name_user{
+    padding-right: 15px;
+    background-color: rgb(17, 96, 98);
+    color: rgb(255 255 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+#name_user:hover{
+    color: rgb(199, 199, 199);
+}
+#name_user:active{
+    color: rgb(147, 147, 147);
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 94%;
+    min-height: 94vh;
+    margin-top: 55px;
+    margin-left: 70px;
+    padding: 20px;
+    transition: margin-left 0.25s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+
+.table-container {
+    max-height: 70vh; /* Максимальная высота контейнера */
+    overflow-y: auto; /* Вертикальная прокрутка */
+    border: 1px solid #ddd; /* Граница контейнера */
+    padding: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Граница таблицы */
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd; /* Границы ячеек */
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold; /* Жирный шрифт */
+    font-size: 1.1rem; /* Увеличенный размер шрифта */
+    border-bottom: 2px solid #ccc; /* Подчеркивание */
+    padding: 10px; /* Добавление отступа */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Добавление тени */
+}
+form {
+    display: inline;
+}
+button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+button.btn-add {
+    background-color: #4CAF50;
+    color: white;
+}
+button.btn-add:hover {
+    background-color: #45a049;
+}
+button.btn-remove {
+    background-color: rgb(185, 59, 32);;
+    color: white;
+}
+button.btn-remove:hover {
+    background-color: rgb(144, 46, 25);
+}
+.group-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.group-item {
+    display: flex; /* Flexbox для выравнивания элементов */
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.group-item span{
+    text-align: center;
+}
+
+.group-item:hover {
+    background-color: #f1f1f1;
+}
+.student-list {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.btn-delete{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: row;
+}

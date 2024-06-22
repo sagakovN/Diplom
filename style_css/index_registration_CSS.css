@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container_registration {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: rgb(17, 96, 98);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px; /* Добавляет отступ снизу для заголовка */
+}
+
+input, h2 {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0; /* Убираем автоматическое центрирование, добавляем отступы сверху и снизу */
+}
+
+input{
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+    width: 100%; /* Адаптируйте под свои нужды */
+    cursor: pointer;
+}
+
+input:hover{
+    background-color: rgb(205, 205, 205);
+    color: rgb(128, 128, 128);
+}
+
+.error_message {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.submit{
+    border: 1px solid rgb(185, 59, 32);
+    background-color: rgb(185, 59, 32);
+    color: white;
+}
+
+.submit:hover {
+    border: 1px solid rgb(148, 49, 27);
+    background-color: rgb(148, 49, 27);
+    color: rgb(209, 209, 209);
+}
+
+.submit:active{
+    border: 1px solid rgb(123, 41, 22);
+    background-color: rgb(123, 41, 22);
+    color: rgb(167, 167, 167);
+}
+
+.password_requirements{
+    color: rgb(184, 207, 207);
+    font-weight: bold;
+}
+
+.password_strength{
+    display: flex;
+}
+
+.strength {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.strength.weak {
+    color: red;
+}
+
+.strength.normal {
+    color: rgb(255, 255, 0);
+}
+
+.strength.strong {
+    color: rgb(2, 194, 2);
+}

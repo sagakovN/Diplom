@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container_registration {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: rgb(17, 96, 98);
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px; /* Добавляет отступ снизу для заголовка */
+}
+
+input, h2 {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0; /* Убираем автоматическое центрирование, добавляем отступы сверху и снизу */
+}
+
+input{
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+    width: 100%; /* Адаптируйте под свои нужды */
+    cursor: pointer;
+}
+
+input:hover{
+    background-color: rgb(205, 205, 205);
+    color: rgb(128, 128, 128);
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение элементов внутри контейнера */
+    align-items: center; /* Выравнивание по вертикали */
+
+    background-color: rgb(255 255 255);
+    border-radius: 10px;
+
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center; /* Выравнивание чекбоксов и текста по вертикали */
+}
+
+/* Дополнительно можно добавить стиль для лейблов для более аккуратного текста */
+label {
+    display: block;
+    text-align: left; /* Выравнивание текста лейбла по левому краю */
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.submit{
+    border: 1px solid rgb(185, 59, 32);
+    background-color: rgb(185, 59, 32);
+    color: white;
+}
+
+.submit:hover {
+    border: 1px solid rgb(148, 49, 27);
+    background-color: rgb(148, 49, 27);
+    color: rgb(209, 209, 209);
+}
+
+.submit:active{
+    border: 1px solid rgb(123, 41, 22);
+    background-color: rgb(123, 41, 22);
+    color: rgb(167, 167, 167);
+}
